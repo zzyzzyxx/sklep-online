@@ -1,0 +1,14 @@
+const stripe = Stripe('pk_live_51QFFK6GU7A54OhS18wAoxqEFnnTVRObntIv104fRLbV2fFrb0fYbagEUp5lZAwm9LzHnKRKq51huUvjWw17MiVP600JaY2MhW9');
+
+document.getElementById('stripe-button').addEventListener('click', async () => {
+    const { error } = await stripe.redirectToCheckout({
+        lineItems: [{ price: 'YOUR_PRICE_ID', quantity: 1 }],
+        mode: 'payment',
+        successUrl: 'https://yourdomain.com/success',
+        cancelUrl: 'https://yourdomain.com/cancel',
+    });
+
+    if (error) {
+        console.error('Error:', error);
+    }
+});

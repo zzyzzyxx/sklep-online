@@ -13,12 +13,29 @@
     </header>
     
     <main>
-        <div class="product">
+      <!--  <div class="product">
             <h2>Produkt 1</h2>
             <p>Cena: 100 PLN</p>
             <button id="stripe-button">Kup przez Stripe</button>
             <button id="payu-button">Kup przez PayU</button>
-        </div>
+        </div> -->
+        
+        
+        
+        <script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1QFeaoGU7A54OhS1dtUIPdch"
+  publishable-key="pk_test_51QFFK6GU7A54OhS1S0iXXQVX2PzA7nwWsihlXaGXmeRSYF12lWbL28imxzxO70aVbtP7CsT8IdwiItfK0yTXeDry00iBhRsYjI"
+>
+</stripe-buy-button>
+        
+        
+        
+        
+        
     </main>
 
     <footer>
